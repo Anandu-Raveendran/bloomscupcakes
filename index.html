@@ -3,228 +3,134 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sweet Cravings Cupcakes</title>
+<title>Blooms Cupcakes | Fresh Cupcakes in Ottawa</title>
+<meta name="description" content="Blooms Cupcakes - Fresh homemade cupcakes in Ottawa. Free delivery in nearby Ottawa areas. Order online today.">
 
-<style>
-    :root {
-        --primary: #e75480;
-        --secondary: #fff5f8;
-        --dark: #333;
-        --light: #ffffff;
-    }
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: 'Segoe UI', sans-serif;
-    }
-
-    body {
-        background: var(--secondary);
-        color: var(--dark);
-        line-height: 1.6;
-    }
-
-    header {
-        background: var(--primary);
-        color: white;
-        padding: 1.5rem 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    header h1 {
-        font-size: 1.8rem;
-    }
-
-    nav a {
-        color: white;
-        text-decoration: none;
-        margin-left: 1.5rem;
-        font-weight: 500;
-    }
-
-    nav a:hover {
-        text-decoration: underline;
-    }
-
-    .hero {
-        background: url('https://images.unsplash.com/photo-1519864600265-abb23847ef2c') center/cover no-repeat;
-        height: 80vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        color: white;
-        padding: 2rem;
-    }
-
-    .hero h2 {
-        font-size: 3rem;
-        background: rgba(0,0,0,0.5);
-        padding: 1rem 2rem;
-        border-radius: 10px;
-    }
-
-    .section {
-        padding: 4rem 2rem;
-        max-width: 1100px;
-        margin: auto;
-        text-align: center;
-    }
-
-    .section h3 {
-        font-size: 2rem;
-        margin-bottom: 2rem;
-        color: var(--primary);
-    }
-
-    .cupcake-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 2rem;
-    }
-
-    .card {
-        background: var(--light);
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        transition: transform 0.3s ease;
-    }
-
-    .card:hover {
-        transform: translateY(-5px);
-    }
-
-    .card img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-    }
-
-    .card h4 {
-        margin: 1rem 0 0.5rem;
-    }
-
-    .card p {
-        padding: 0 1rem 1.5rem;
-        font-size: 0.9rem;
-    }
-
-    .about p {
-        max-width: 700px;
-        margin: auto;
-        font-size: 1.1rem;
-    }
-
-    .contact form {
-        max-width: 500px;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .contact input,
-    .contact textarea {
-        margin-bottom: 1rem;
-        padding: 0.8rem;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 1rem;
-    }
-
-    .contact button {
-        padding: 0.8rem;
-        border: none;
-        background: var(--primary);
-        color: white;
-        font-size: 1rem;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    .contact button:hover {
-        opacity: 0.9;
-    }
-
-    footer {
-        background: var(--primary);
-        color: white;
-        text-align: center;
-        padding: 1rem;
-        margin-top: 3rem;
-    }
-
-    @media(max-width: 768px) {
-        .hero h2 {
-            font-size: 2rem;
-        }
-    }
-</style>
 </head>
 <body>
 
 <header>
-    <h1>Sweet Cravings</h1>
+    <div class="logo">Blooms Cupcakes</div>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
     <nav>
-        <a href="#menu">Menu</a>
-        <a href="#about">About</a>
-        <a href="#contact">Order</a>
+        <ul id="navMenu">
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#order">Order</a></li>
+            <li><a href="#instagram">Instagram</a></li>
+        </ul>
     </nav>
 </header>
 
+<div class="delivery-banner">
+    🚚 Free Delivery in Nearby Ottawa Areas
+</div>
+
 <section class="hero">
-    <h2>Love you Chunchun vaave</h2>
+    <h1>Premium Homemade Cupcakes in Ottawa</h1>
+    <p>Freshly baked with love for birthdays, events & special moments.</p>
+    <a href="#order" class="hero-btn">Order Now</a>
 </section>
 
-<section id="menu" class="section">
-    <h3>Our Cupcakes</h3>
-    <div class="cupcake-grid">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1587668178277-295251f900ce" alt="Vanilla Cupcake">
-            <h4>Classic Vanilla</h4>
-            <p>Light vanilla sponge topped with creamy buttercream frosting.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1607478900766-efe13248b125" alt="Chocolate Cupcake">
-            <h4>Chocolate Delight</h4>
-            <p>Rich chocolate cupcake with silky chocolate ganache.</p>
-        </div>
-
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307" alt="Strawberry Cupcake">
-            <h4>Strawberry Bliss</h4>
-            <p>Fresh strawberry cupcake with whipped strawberry frosting.</p>
-        </div>
+<section id="gallery" class="section">
+  <h2>Our Cupcakes</h2>
+  <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="images/IMG_0016.jpeg" alt=""></div>
+      <div class="swiper-slide"><img src="images/IMG_0025.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/IMG_0065.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/IMG_0067.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/IMG_9964.jpeg" alt=""></div>
+      <div class="swiper-slide"><img src="images/IMG_9965.jpeg" alt=""></div>
+      <div class="swiper-slide"><img src="images/IMG_9973.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/IMG_9974.PNG" alt=""></div>
+      <div class="swiper-slide"><img src="images/IMG_9978.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/IMG_9979.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/IMG_9982.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/IMG_9985.PNG" alt=""></div>
+      <div class="swiper-slide"><img src="images/IMG_9986.jpg" alt=""></div>
+      <div class="swiper-slide"><img src="images/IMG_9987.PNG" alt=""></div>
+      <div class="swiper-slide"><img src="images/IMG_9988.PNG" alt=""></div>
     </div>
+    <div class="swiper-pagination"></div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+  </div>
 </section>
 
-<section id="about" class="section about">
-    <h3>About Us</h3>
-    <p>
-        At Sweet Cravings, we bake every cupcake with love using premium ingredients.
-        Whether it's birthdays, weddings, or just a sweet treat for yourself,
-        our handcrafted cupcakes make every moment special.
-    </p>
+<section id="order" class="section instagram-order">
+  <h2>Order via Instagram</h2>
+  <p>Send us a DM on Instagram to place your order. We will confirm your delivery and flavors directly.</p>
+  <a href="https://www.instagram.com/bloomscupcakes.ca" target="_blank" class="instagram-btn">
+    📩 Order on Instagram
+  </a>
 </section>
 
-<section id="contact" class="section contact">
-    <h3>Place an Order</h3>
-    <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea rows="5" placeholder="Your Order Details" required></textarea>
-        <button type="submit">Send Order</button>
-    </form>
+<section id="location" class="section">
+  <h2>Find Us in Ottawa</h2>
+  <p>We are based in Ottawa. Free delivery in nearby areas.</p>
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11500.123456789!2d-75.675!3d45.431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce05aa55aa55%3A0x1234567890abcdef!2s25%20Woodridge%20Crescent%2C%20Ottawa%2C%20ON!5e0!3m2!1sen!2sca!4v1678932931234!5m2!1sen!2sca"
+      width="100%"
+      height="400"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+<section id="instagram" class="section instagram">
+    <h2>Follow Us on Instagram</h2>
+    <p>See our latest cupcakes and customer orders.</p>
+    <a href="https://www.instagram.com/bloomscupcakes.ca" target="_blank">
+        Visit @bloomscupcakes.ca
+    </a>
 </section>
 
 <footer>
-    <p>© 2026 Sweet Cravings Cupcakes | Made with ❤</p>
+    <p>© 2026 BloomsCupcakes.ca</p>
+    <p>Ottawa, Ontario</p>
 </footer>
+
+<!-- At the very end of your body -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  // Hamburger menu
+  function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("active");
+  }
+
+  // Swiper carousel
+  var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    spaceBetween: 20,
+    centeredSlides: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 3 }
+    }
+  });
+</script>
 
 </body>
 </html>

@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #fff8fb;
+    color: #333;
+}
+
+/* Header */
+
+header {
+    background: #f8c8dc;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* Delivery Banner */
+
+.delivery-banner {
+    background: #ffe6f0;
+    text-align: center;
+    padding: 12px;
+    font-weight: 600;
+}
+
+/* Hero */
+
+.hero {
+    padding: 80px 20px;
+    text-align: center;
+    background: linear-gradient(to right, #ffe6f0, #fff);
+}
+
+.hero h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+}
+
+.hero-btn {
+    background: #e91e63;
+    color: white;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+/* Sections */
+
+.section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+}
+
+/* Swiper */
+
+.swiper {
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.swiper-slide img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* Form */
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+button {
+    padding: 12px;
+    background: #e91e63;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Instagram */
+
+.instagram a {
+    display: inline-block;
+    margin-top: 15px;
+    background: #d62976;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.instagram-order {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.instagram-btn {
+    display: inline-block;
+    background: #d62976;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.instagram-btn:hover {
+    background: #bf2161;
+}
+
+.map-container {
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+
+footer {
+    background: #f8c8dc;
+    padding: 30px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #f8c8dc;
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .swiper-slide img {
+        height: 280px;
+    }
+}
